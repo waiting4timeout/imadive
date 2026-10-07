@@ -2319,7 +2319,7 @@ dependencies = [
 
 [[package]]
 name = "imadive"
-version = "0.3.2"
+version = "0.3.3"
 dependencies = [
  "anyhow",
  "axum",
@@ -2350,7 +2350,7 @@ dependencies = [
 
 [[package]]
 name = "imadive-desktop"
-version = "0.3.2"
+version = "0.3.3"
 dependencies = [
  "anyhow",
  "imadive",
