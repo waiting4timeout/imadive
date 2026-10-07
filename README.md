@@ -8,10 +8,10 @@ It comes as a desktop app for Windows and Linux, and as a command-line app that 
 
 <table>
 <tr>
-<td align="center" width="25%"><a href="https://github.com/JaviEspinar/totufoto/releases/download/v0.3.2/Imadive-0.3.2-windows-x64.exe"><img src="docs/icons/windows.svg" width="56" height="56" alt=""><br><b>Windows</b></a><br><sub>10 and 11 · .exe</sub></td>
-<td align="center" width="25%"><a href="https://github.com/JaviEspinar/totufoto/releases/download/v0.3.2/Imadive-0.3.2-linux-amd64.deb"><img src="docs/icons/debian.svg" width="56" height="56" alt=""><br><b>Debian</b></a><br><sub>Ubuntu, Linux Mint · .deb</sub></td>
-<td align="center" width="25%"><a href="https://github.com/JaviEspinar/totufoto/releases/download/v0.3.2/Imadive-0.3.2-linux-x86_64.AppImage"><img src="docs/icons/linux.svg" width="56" height="56" alt=""><br><b>Other Linux</b></a><br><sub>x86-64 · AppImage</sub></td>
-<td align="center" width="25%"><a href="https://github.com/JaviEspinar/totufoto/blob/main/docs/server.md"><img src="docs/icons/server.svg" width="56" height="56" alt=""><br><b>Server</b></a><br><sub>Home server</sub></td>
+<td align="center" width="25%"><a href="https://github.com/waiting4timeout/imadive/releases/download/v0.3.2/Imadive-0.3.2-windows-x64.exe"><img src="docs/icons/windows.svg" width="56" height="56" alt=""><br><b>Windows</b></a><br><sub>10 and 11 · .exe</sub></td>
+<td align="center" width="25%"><a href="https://github.com/waiting4timeout/imadive/releases/download/v0.3.2/Imadive-0.3.2-linux-amd64.deb"><img src="docs/icons/debian.svg" width="56" height="56" alt=""><br><b>Debian</b></a><br><sub>Ubuntu, Linux Mint · .deb</sub></td>
+<td align="center" width="25%"><a href="https://github.com/waiting4timeout/imadive/releases/download/v0.3.2/Imadive-0.3.2-linux-x86_64.AppImage"><img src="docs/icons/linux.svg" width="56" height="56" alt=""><br><b>Other Linux</b></a><br><sub>x86-64 · AppImage</sub></td>
+<td align="center" width="25%"><a href="https://github.com/waiting4timeout/imadive/blob/main/docs/server.md"><img src="docs/icons/server.svg" width="56" height="56" alt=""><br><b>Server</b></a><br><sub>Home server</sub></td>
 </tr>
 </table>
 
@@ -55,7 +55,7 @@ To report a security problem, see [SECURITY.md](SECURITY.md).
 
 ## Desktop app (Windows and Linux)
 
-Download the file for your system from the [latest release](https://github.com/JaviEspinar/totufoto/releases/latest). Face recognition and everything it needs are built in.
+Download the file for your system from the [latest release](https://github.com/waiting4timeout/imadive/releases/latest). Face recognition and everything it needs are built in.
 
 - **Windows 10/11**: `Imadive-<version>-windows-x64.exe`. Double-click it. It is not signed, so the first time Windows SmartScreen may say "Windows protected your PC": click **More info** → **Run anyway**.
 - **Debian, Ubuntu and Linux Mint** (Debian 12 or Ubuntu 22.04 and newer, x86-64): `Imadive-<version>-linux-amd64.deb`, the smaller download. Install it, then start **Imadive** from the applications menu:
@@ -103,7 +103,7 @@ cargo build --release -p imadive-desktop --features custom-protocol
 
 ## Command-line app
 
-The command-line app serves the gallery at `http://127.0.0.1:7878` for your browser. It is handy on a server or NAS, or on macOS. **On a Linux server, one command installs it as a service**, with a wizard that asks the few things it needs (no compiling): see [Running it on a home server](docs/server.md). It is also [a Docker image](docs/docker.md) (`ghcr.io/javiespinar/imadive`). The steps below build it from source.
+The command-line app serves the gallery at `http://127.0.0.1:7878` for your browser. It is handy on a server or NAS, or on macOS. **On a Linux server, one command installs it as a service**, with a wizard that asks the few things it needs (no compiling): see [Running it on a home server](docs/server.md). It is also [a Docker image](docs/docker.md) (`ghcr.io/waiting4timeout/imadive`). The steps below build it from source.
 
 ### 1. Install Rust
 
@@ -122,8 +122,8 @@ Any 64-bit x86 or ARM CPU works. AVX2 is **not** required: ONNX Runtime picks th
 macOS and Linux:
 
 ```sh
-git clone https://github.com/JaviEspinar/totufoto.git
-cd totufoto
+git clone https://github.com/waiting4timeout/imadive.git
+cd imadive
 scripts/fetch-models.sh
 scripts/fetch-onnxruntime.sh
 ```
@@ -131,8 +131,8 @@ scripts/fetch-onnxruntime.sh
 Windows (PowerShell):
 
 ```powershell
-git clone https://github.com/JaviEspinar/totufoto.git
-cd totufoto
+git clone https://github.com/waiting4timeout/imadive.git
+cd imadive
 powershell -ExecutionPolicy Bypass -File scripts\fetch-models.ps1
 powershell -ExecutionPolicy Bypass -File scripts\fetch-onnxruntime.ps1
 ```

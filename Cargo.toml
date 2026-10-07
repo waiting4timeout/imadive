@@ -11,8 +11,8 @@ version = "0.3.2"
 edition = "2024"
 rust-version = "1.93" # checked in CI; reverse_geocoder needs it (through `fixed`)
 license = "PolyForm-Noncommercial-1.0.0"
-repository = "https://github.com/JaviEspinar/totufoto"
-homepage = "https://github.com/JaviEspinar/totufoto"
+repository = "https://github.com/waiting4timeout/imadive"
+homepage = "https://github.com/waiting4timeout/imadive"
 authors = ["waiting4timeout (https://github.com/waiting4timeout)"]
 
 [package]

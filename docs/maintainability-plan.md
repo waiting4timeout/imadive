@@ -28,7 +28,7 @@ The plan has five phases (section 8). Phase 1 (license, metadata, security fixes
 | Third-party notices | missing | Release binaries embed InsightFace buffalo_s models (non-commercial research only), ONNX Runtime (MIT, its LICENSE is fetched to `onnxruntime/LICENSE` but not shipped), the Visual C++ redistributables, and `reverse_geocoder` bundles GeoNames data (CC BY 4.0, attribution required). `README.md:10` names GeoNames but not its license. |
 | `SECURITY.md`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md` | missing | |
 | Issue and PR templates, Dependabot | missing | `.github/` only holds `workflows/desktop.yml`. |
-| Personal data in the tree | clean | No IPs, personal paths or emails in tracked files. `.claude/` is untracked. The project is published under the **waiting4timeout** account (licensor in `LICENSE`, `authors` in `Cargo.toml`); the repository still lives at `JaviEspinar/imadive` until it is moved (see 2.3). |
+| Personal data in the tree | clean | No IPs, personal paths or emails in tracked files. `.claude/` is untracked. The project is published under the **waiting4timeout** account (licensor in `LICENSE`, `authors` in `Cargo.toml`); the repository lives at `waiting4timeout/imadive` (see 2.3). |
 | Formatting config | missing | No `rustfmt.toml`, `.editorconfig`; code uses lines up to about 150 characters, so any contributor's `cargo fmt` rewrites the tree. |
 
 ### 2.2 Planned changes
@@ -45,12 +45,12 @@ The plan has five phases (section 8). Phase 1 (license, metadata, security fixes
 
 ### 2.3 Moving the repository to waiting4timeout
 
-The project is presented under the [waiting4timeout](https://github.com/waiting4timeout) account (decided). The repository itself stays at `github.com/JaviEspinar/totufoto` for now; when it moves:
+The project is presented under the [waiting4timeout](https://github.com/waiting4timeout) account (decided), and lives at `github.com/waiting4timeout/imadive` since October 2026. How the move went, and what is left:
 
-1. Transfer it in GitHub (Settings, General, Transfer ownership) rather than creating a new one: issues, releases, stars and the download history move with it, and GitHub redirects the old URLs, including `git clone` and release downloads, as long as no new repository takes the name `JaviEspinar/imadive`.
-2. Update the links in one commit: `PROJECT_URL` in `src/http/mod.rs` (Settings' About links and the links the desktop app may open), `Cargo.toml` (`repository`, `homepage`), `README.md` (latest release link, both `git clone` commands), `SECURITY.md` if a contact is added, and `.github/FUNDING.yml` once it exists. Old release notes (`release-notes/v0.1.6.md` links to v0.1.5) can keep their URLs, which redirect.
+1. The repository moved by creating `waiting4timeout/imadive` and pushing `main` and every tag to it, not by a GitHub transfer. The old `JaviEspinar/totufoto` repository keeps the releases with their binaries and download counts, and old URLs do not redirect; archive or delete it once the releases are rebuilt here (the Desktop apps workflow, run by hand for each tag, makes them).
+2. The links were updated in one commit: `PROJECT_URL` in `src/http/mod.rs` (Settings' About links and the links the desktop app may open), `Cargo.toml` (`repository`, `homepage`), `README.md` (latest release link, both `git clone` commands), `scripts/install.sh` (`repo=` and the one-line command), `docs/`, `.github/ISSUE_TEMPLATE/config.yml`, and the old release notes, whose URLs were updated too because old URLs do not redirect.
 3. The desktop identifier became `com.waiting4timeout.imadive` with the rename to Imadive, together with code that moves the old `com.javiespinar.totufoto` data folder on first start. It names the data folder, so it must not change again without the same kind of migration.
-4. Repository settings do not all transfer: enable private vulnerability reporting, branch protection, Dependabot and Discussions again on the new repository, and check that the Actions workflows can still create releases.
+4. Repository settings had to be made again on the new repository: enable private vulnerability reporting, branch protection and Discussions (Dependabot is already running), and check that the Actions workflows can create releases.
 5. Local clones: `git remote set-url origin git@github.com:waiting4timeout/imadive.git`.
 6. Commits so far are authored with a personal e-mail address. To publish new commits under the professional identity only, set `git config user.email` in this repository to the waiting4timeout account's address (or its GitHub no-reply address); history stays as it is.
 

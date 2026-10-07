@@ -3,9 +3,9 @@
 Each release is also published as a container image for x86-64 and ARM64 (a Raspberry Pi 4 or 5 with a 64-bit system, an ARM NAS):
 
 ```
-ghcr.io/javiespinar/imadive:latest       the latest release
-ghcr.io/javiespinar/imadive:0.3          the latest 0.3.x
-ghcr.io/javiespinar/imadive:0.3.3        exactly that version
+ghcr.io/waiting4timeout/imadive:latest       the latest release
+ghcr.io/waiting4timeout/imadive:0.3          the latest 0.3.x
+ghcr.io/waiting4timeout/imadive:0.3.3        exactly that version
 ```
 
 It is the same server as the [Linux server install](server.md), with face recognition included, in a minimal image (no shell or package manager) that runs as an unprivileged user.
@@ -19,7 +19,7 @@ docker run -d --name imadive --restart unless-stopped \
   -p 7878:7878 \
   -v imadive-data:/data \
   -v /srv/photos:/photos:ro \
-  ghcr.io/javiespinar/imadive:latest
+  ghcr.io/waiting4timeout/imadive:latest
 ```
 
 Then open `http://<server address>:7878`. The first scan indexes the photos and finds the faces; the gallery fills as it goes.
@@ -32,7 +32,7 @@ Then open `http://<server address>:7878`. The first scan indexes the photos and 
 ```yaml
 services:
   imadive:
-    image: ghcr.io/javiespinar/imadive:latest
+    image: ghcr.io/waiting4timeout/imadive:latest
     restart: unless-stopped
     ports:
       - "7878:7878"
@@ -54,7 +54,7 @@ services:
 
 ```sh
 docker run ... -v /srv/photos:/photos/main -v /mnt/nas/phone:/photos/phone \
-  ghcr.io/javiespinar/imadive:latest /photos/main /photos/phone
+  ghcr.io/waiting4timeout/imadive:latest /photos/main /photos/phone
 ```
 
 Folders can also be added in the gallery's Settings, from any folder mounted in the container.
@@ -76,7 +76,7 @@ To rotate and delete photos, it must be able to write them: run it as the user t
 ## Updating
 
 ```sh
-docker pull ghcr.io/javiespinar/imadive:latest
+docker pull ghcr.io/waiting4timeout/imadive:latest
 docker rm -f imadive
 docker run ...   # the same command as before
 ```
@@ -88,7 +88,7 @@ The index in `/data` carries over; nothing is indexed again. The release notes s
 Each image carries a signed record of the GitHub build it came from:
 
 ```sh
-gh attestation verify oci://ghcr.io/javiespinar/imadive:latest --repo JaviEspinar/totufoto
+gh attestation verify oci://ghcr.io/waiting4timeout/imadive:latest --repo waiting4timeout/imadive
 ```
 
 ## Troubleshooting

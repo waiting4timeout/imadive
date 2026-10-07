@@ -9,7 +9,7 @@ How to run the command-line app on a Linux machine that is always on (a NAS, a m
 On Debian 12, Ubuntu 22.04, Raspberry Pi OS (64-bit) or newer, on an x86-64 or ARM64 machine (a Raspberry Pi 4 or 5 included):
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/JaviEspinar/totufoto/main/scripts/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/waiting4timeout/imadive/main/scripts/install.sh | sh
 ```
 
 It downloads the latest release's server build for the machine, checks it against the release's checksums, and starts **`imadive setup`**, a wizard in the terminal. Every question has an answer ready (press Enter to keep it):
@@ -26,7 +26,7 @@ Run it again to **update** (the same `curl` line), **change the settings** or **
 Without questions, for scripts: add `--yes` and the options you want (`sudo imadive setup --help` lists them):
 
 ```sh
-curl -fsSL https://raw.githubusercontent.com/JaviEspinar/totufoto/main/scripts/install.sh | sh -s -- --yes --folder /srv/photos
+curl -fsSL https://raw.githubusercontent.com/waiting4timeout/imadive/main/scripts/install.sh | sh -s -- --yes --folder /srv/photos
 ```
 
 **With Docker** instead: see [Running Imadive with Docker](docker.md).
@@ -46,7 +46,7 @@ sudo apt install build-essential git curl        # Debian, Ubuntu, Raspberry Pi 
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source ~/.cargo/env
 
-git clone https://github.com/JaviEspinar/totufoto.git ~/imadive
+git clone https://github.com/waiting4timeout/imadive.git ~/imadive
 cd ~/imadive
 scripts/fetch-models.sh
 scripts/fetch-onnxruntime.sh

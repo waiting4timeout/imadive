@@ -11,7 +11,7 @@ Thanks for helping. Bug reports, ideas and pull requests are all welcome.
 You need Rust 1.93 or newer (`rustup` installs it), and for the browser tests Node.js 24 or newer. [just](https://just.systems) is optional: every recipe in the `justfile` is a plain command you can also run yourself.
 
 ```sh
-git clone https://github.com/JaviEspinar/totufoto.git imadive
+git clone https://github.com/waiting4timeout/imadive.git imadive
 cd imadive
 just fetch     # face models and ONNX Runtime (optional for most work)
 just dev       # the gallery on the sample photo, with a temporary index
