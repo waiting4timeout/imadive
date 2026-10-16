@@ -2330,7 +2330,7 @@ dependencies = [
 
 [[package]]
 name = "imadive"
-version = "0.3.5"
+version = "0.3.6"
 dependencies = [
  "anyhow",
  "axum",
@@ -2363,7 +2363,7 @@ dependencies = [
 
 [[package]]
 name = "imadive-desktop"
-version = "0.3.5"
+version = "0.3.6"
 dependencies = [
  "anyhow",
  "imadive",
@@ -2639,7 +2639,7 @@ dependencies = [
  "simd_cesu8",
  "thiserror 2.0.21",
  "walkdir",
- "windows-link 0.2.1",
+ "windows-link",
 ]
 
 [[package]]
