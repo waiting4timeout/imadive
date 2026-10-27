@@ -2360,6 +2360,7 @@ dependencies = [
  "trash",
  "ureq",
  "walkdir",
+ "windows",
 ]
 
 [[package]]
