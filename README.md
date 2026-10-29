@@ -13,8 +13,6 @@ It comes as a desktop app for Windows and Linux, and as a command-line app that 
 - **People, found on your computer.** Faces are detected and grouped locally; no photo or face ever leaves it.
 - **From any device at home.** Share it on your network and open it on a phone, or upload photos to it from the phone's browser.
 
-**Compared with [Immich](https://immich.app) and [PhotoPrism](https://www.photoprism.app):** both are excellent and do more, and both usually run as several services with Docker, a database server among them. Immich is built around backing up your phones with its own apps; if that's what you need, it's the better choice. Imadive is for a gallery of the folders you already have, in a single program you can also run on a desktop, with nothing else to set up.
-
 #### Latest Releases
 
 <table>
